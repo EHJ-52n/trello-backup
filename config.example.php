@@ -1,9 +1,6 @@
 <?php
 // See also README.md
 
-// Where to store backups
-$path = '.';
-
 // Key from https://trello.com/1/appKey/generate
 $key = 'here_put_your_Key';
 
@@ -15,6 +12,12 @@ $backup_closed_boards = false;
 
 // Backup all Trello Boards from the organizations that the user has read access to
 $backup_all_organization_boards = false;
+
+// Backup all cards' attachments in a subfolder for each Trello board
+$backup_attachments = false;
+
+// Where to store the backup files (by default, trello boards JSON files will be stored in this directory)
+$path = dirname(__FILE__);
 
 // HTTP proxy, if one is required, in the format 'host:port', e.g. 'proxy.example.com:80' or '192.168.1.254:8080'
 $proxy= '';
